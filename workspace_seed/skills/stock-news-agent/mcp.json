@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "./workspace"
+      ]
+    },
+
+    "naver-news": {
+      "command": "python",
+      "args": [
+        "mcp/naver_news_server.py"
+      ],
+      "env": {
+        "NAVER_CLIENT_ID": "${NAVER_CLIENT_ID}",
+        "NAVER_CLIENT_SECRET": "${NAVER_CLIENT_SECRET}"
+      }
+    }
+  }
+}
